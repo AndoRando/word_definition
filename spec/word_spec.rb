@@ -17,17 +17,19 @@ describe('Word') do
     end
   end
 
-  # describe('#definitions') do
-  #   it('returns the word') do
-  #     expect().to(eq())
-  #   end
-  # end
-  #
-  # describe('#add_definition') do
-  #   it('returns the word') do
-  #     expect().to(eq())
-  #   end
-  # end
+  describe('#definitions') do
+    it('returns the empty array of definitions') do
+      expect(@mountain_word.definitions()).to(eq([]))
+    end
+  end
+
+  describe('#add_definition') do
+    it('returns the word') do
+      @star_def_verb = Definition.new({:part_of_speech=> "verb", :meaning=> "to feature as a star."})
+      @star_word.add_definition(@star_def_verb)
+      expect(@star_word.definitions).to(eq([@star_def_verb]))
+    end
+  end
 
   describe('.clear') do
     it('returns the word') do
