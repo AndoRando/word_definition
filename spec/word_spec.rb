@@ -41,15 +41,15 @@ describe('Word') do
     end
   end
 
-  # describe('#id') do
-  #   it('returns the word') do
-  #     expect().to(eq())
-  #   end
-  # end
-  #
-  # describe('.find') do
-  #   it('returns the word') do
-  #     expect().to(eq())
-  #   end
-  # end
+  describe('#id') do
+    it('returns a word id') do
+      expect(@star_word.id()).to(eq(2))
+    end
+  end
+
+  describe('.find') do
+    it('returns a word by its id number') do
+      expect(Word.find(@mountain_word.id())).to(eq(@mountain_word))
+    end
+  end
 end
