@@ -1,0 +1,16 @@
+<h1>Definitions for <%= @word.word() %></h1>
+
+<ul>
+  <% @word.definitions().each() do |definition| %>
+    <li>
+      <a href="/definitions/<%=definition.id() %>">
+        <p>
+          <%= definition.part_of_speech() %>
+        </p>
+        <p>
+          <%= definition.meaning() %>
+        </p>
+      </a>
+    </li>
+  <% end %>
+</ul>
