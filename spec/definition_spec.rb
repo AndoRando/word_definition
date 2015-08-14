@@ -37,16 +37,16 @@ describe('Definition') do
       expect(Definition.all()).to(eq([@mountain_def_noun, @mountain_def_adjective, @star_def_noun, @star_def_verb]))
     end
   end
-  #
-  # describe('#id') do
-  #   it('returns a definition id') do
-  #
-  #   end
-  # end
-  #
-  # describe('.find') do
-  #   it('returns a definition by its id number') do
-  #
-  #   end
-  # end
+
+  describe('#id') do
+    it('returns a definition id') do
+      expect(@star_def_noun.id()).to(eq(3))
+    end
+  end
+
+  describe('.find') do
+    it('returns a definition by its id number') do
+      expect(Definition.find(@star_def_verb.id())).to(eq(@star_def_verb))
+    end
+  end
 end
