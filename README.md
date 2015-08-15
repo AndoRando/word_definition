@@ -8,6 +8,8 @@
 
 _This application allows a user to add their own custom words and attach multiple definitions to each word. Each definition may also have a part-of-speech identifier (noun, verb, adjective, etc.) as well as a meaning._
 
+_Link to Heroku hosting - https://ancient-depths-6461.herokuapp.com/ _
+
 ## Setup
 
 * _Clone to desktop (or your preferred staging destination)_
