@@ -29,12 +29,12 @@ get('/definitions/:id') do
   erb(:definition)
 end
 
-get('words/:id') do
+get('/words/:id') do
   @word = Word.find(params.fetch('id').to_i())
   erb(:word)
 end
 
-get('words/:id/definitions/new') do
+get('/words/:id/definitions/new') do
   @word = Word.find(params.fetch('id').to_i())
   erb(:add_definition)
 end

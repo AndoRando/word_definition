@@ -19,7 +19,7 @@ class Definition
   define_singleton_method(:find) do |id|
     found_definition = nil
     @@Definitions.each() do |definition|
-      if definition.id().eql?(id.to_i())
+      if definition.id().eql?(id)
         found_definition = definition
       end
     end
